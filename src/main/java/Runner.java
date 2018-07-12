@@ -1,6 +1,9 @@
 import db.DBHelper;
+import db.DBManager;
 import models.Administrator;
 import models.Manager;
+
+import java.util.List;
 
 
 public class Runner {
@@ -19,5 +22,7 @@ public class Runner {
         DBHelper.save(administrator2);
         DBHelper.save(administrator3);
         DBHelper.save(administrator4);
+
+        List<Administrator> foundAdministrators = DBManager.getManagersAdmins(manager1);
     }
 }
