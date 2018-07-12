@@ -13,22 +13,11 @@ public class Manager extends Employee {
 
     public Manager(){}
 
-    public Manager(String name, String nI, double salary, double budget,Department department){
+    public Manager(String name, String nI, double salary, double budget){
         super(name, nI, salary);
         this.budget = budget;
-        this.department = department;
     }
 
-
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
 
     @Column(name = "budget")
     public double getBudget() {
@@ -39,7 +28,7 @@ public class Manager extends Employee {
         this.budget = budget;
     }
 
-    @OneToOne(mappedBy = "mentor", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "manager", fetch = FetchType.LAZY)
     public Department getDepartment() {
         return department;
     }
