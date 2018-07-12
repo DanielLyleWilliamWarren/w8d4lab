@@ -3,7 +3,6 @@ package models;
 import javax.persistence.*;
 
 @Entity
-//@MappedSuperclass
 @Table(name = "employees")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Employee {

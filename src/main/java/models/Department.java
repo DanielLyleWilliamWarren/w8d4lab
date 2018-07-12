@@ -35,6 +35,7 @@ public class Department {
     public void setTitle(String title) {
         this.title = title;
     }
+
     @OneToOne
     @JoinColumn(name = "manager_id", nullable = false)
     public Manager getManager() {

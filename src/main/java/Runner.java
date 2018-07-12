@@ -31,5 +31,7 @@ public class Runner {
         DBHelper.save(administrator4);
 
         List<Administrator> foundAdministrators = DBManager.getManagersAdmins(manager1);
+
+        Department foundDepartment = DBManager.getDepartment(manager1);
     }
 }

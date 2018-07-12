@@ -15,17 +15,6 @@ public class Administrator extends Employee{
         this.manager = manager;
     }
 
-//
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id")
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-
     @ManyToOne
     @JoinColumn(name = "manager_id", nullable = false)
     public Manager getManager() {
