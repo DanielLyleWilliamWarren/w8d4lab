@@ -3,7 +3,9 @@ package models;
 import javax.persistence.*;
 
 @Entity
+//@MappedSuperclass
 @Table(name = "employees")
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Employee {
 
     private int id;
@@ -58,4 +60,6 @@ public abstract class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+
 }

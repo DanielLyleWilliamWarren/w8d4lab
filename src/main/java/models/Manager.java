@@ -7,7 +7,6 @@ import java.util.List;
 @Table(name = "managers")
 public class Manager extends Employee {
 
-    private int id;
     private double budget;
     private String department;
     private List<Administrator> administrators;
@@ -20,16 +19,16 @@ public class Manager extends Employee {
         this.department = department;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id")
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     @Column(name = "budget")
     public double getBudget() {
