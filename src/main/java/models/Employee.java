@@ -8,11 +8,11 @@ public abstract class Employee {
 
     private int id;
     private String name;
-    private int nI;
+    private String nI;
     private double salary;
 
 
-    public Employee(String name, int nI, double salary) {
+    public Employee(String name, String nI, double salary) {
         this.name = name;
         this.nI = nI;
         this.salary = salary;
@@ -42,11 +42,11 @@ public abstract class Employee {
     }
 
     @Column(name = "nI")
-    public int getnI() {
+    public String getnI() {
         return nI;
     }
 
-    public void setnI(int nI) {
+    public void setnI(String nI) {
         this.nI = nI;
     }
 
