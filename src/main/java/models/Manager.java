@@ -31,6 +31,7 @@ public class Manager extends Employee {
         this.id = id;
     }
 
+    @Column(name = "budget")
     public double getBudget() {
         return budget;
     }
@@ -39,6 +40,7 @@ public class Manager extends Employee {
         this.budget = budget;
     }
 
+    @Column(name = "department")
     public String getDepartment() {
         return department;
     }
@@ -47,6 +49,7 @@ public class Manager extends Employee {
         this.department = department;
     }
 
+    @OneToMany(mappedBy="manager", fetch = FetchType.LAZY)
     public List<Administrator> getAdministrators() {
         return administrators;
     }
